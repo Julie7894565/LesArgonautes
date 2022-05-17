@@ -23,7 +23,6 @@ function connexion()
 /**
  * Créer membre
  * crée un membre en base de données 
- * setter -- ne renvoie rien !
  * */
 function creerMembre($name)
 {
@@ -36,7 +35,6 @@ function creerMembre($name)
 /**
  * recuperer les membres
  * recupere les membres en base de données 
- * getter -- il a des données en main !
  * renvoie les données
  * */
 function getMembres()
