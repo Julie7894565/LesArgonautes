@@ -1,1 +1,1 @@
-La base de donnée est dans le dossier sql. 
+La base de donnée est disponible dans le dossier sql. 
