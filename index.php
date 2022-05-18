@@ -22,7 +22,7 @@ function connexion()
 
 /**
  * Créer membre
- * crée un membre en base de données 
+ * Requête préparée pour créer un membre en base de données 
  * */
 function creerMembre($name)
 {
@@ -33,8 +33,7 @@ function creerMembre($name)
 }
 
 /**
- * recuperer les membres
- * recupere les membres en base de données 
+ * récuperer les membres en base de données
  * renvoie les données
  * */
 function getMembres()
@@ -46,9 +45,10 @@ function getMembres()
     return $resultats;
 }
 
-
+/**Si le champ 'name' est rempli dans le formulaire 
+ * Crée un membre dans la base de donnée
+ */
 if (isset($_POST['name']) && !empty($_POST['name'])) {
-    var_dump($_POST['name']);
     creerMembre($_POST['name']);
 }
 
