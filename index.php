@@ -48,7 +48,6 @@ function getMembres()
 /**Fonction de nettoyage des données qui :
  * enlève les espaces avant / après
  * éjecte les balises
- * enlève les espaces avant / après
  * échape les caractères spéciaux
  **/
 
