@@ -45,10 +45,29 @@ function getMembres()
     return $resultats;
 }
 
+/**Fonction de nettoyage des données qui :
+ * enlève les espaces avant / après
+ * éjecte les balises
+ * enlève les espaces avant / après
+ * échape les caractères spéciaux
+ **/
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = strip_tags($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+
 /**Si le champ 'name' est rempli dans le formulaire 
+ * Nettoie la valeur du champ
  * Crée un membre dans la base de donnée
  */
 if (isset($_POST['name']) && !empty($_POST['name'])) {
+    $nom = test_input($_POST['name']);
     creerMembre($_POST['name']);
 }
 
